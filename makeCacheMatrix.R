@@ -1,3 +1,7 @@
+## First we write the function to Cache the inverse of the Matrix.
+## This function will help Cache the matrix inversion instead of having to repeat the funtion again. It will store the matrix and essentially cashe the inverse.
+
+## In this function creates a matrix that will cache the inverse as well.
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -10,6 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get, setinverse = setinverse, getinverse = getinverse)
 }
 makeCacheMatrix("c:/User/Sarah/Desktop/Coursera/specdata")
+## With this function, it computes the inverse of the matrix that was created in the function above. This will return the inverse from the cache.
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
   if(!is.null(inv)) {
